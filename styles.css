@@ -31,13 +31,21 @@ img {
 /* ========== HEADER ========== */
 
 .header {
-  padding: 40px 80px 0;
+  height: 80px;               /* фиксированная высота */
+  display: flex;
+  align-items: center;        /* центрируем лого и меню по вертикали */
+  justify-content: space-between;
+  padding: 0 80px;            /* боковые отступы */
+  position: relative;
+  box-sizing: border-box;
 }
 
-.header-row {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
+/* Линия под header на всю ширину контейнера 1440px */
+.header-line {
+  height: 1px;
+  background-color: #000;
+  width: 100%;               /* 1440px через .page */
+  margin: 0 auto;
 }
 
 .logo {
