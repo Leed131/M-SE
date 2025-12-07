@@ -137,13 +137,13 @@ img {
 }
 
 .btn-dark {
-  background: #111111;
-  color: #ffffff;
+  background: transparent;
+  color: #111111;
 }
 
 .btn-dark:hover {
-  background: #ffffff;
-  color: #111111;
+  background: #111111;
+  color: #ffffff;
 }
 
 .btn-outline {
