@@ -1,218 +1,146 @@
-/* RESET */
-*,
-*::before,
-*::after {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+// @shared
+import { jsx } from "@app/html-jsx"
+
+export function GlobalStyles() {
+  return (
+    <>
+      <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+      <link href="/s/static/lib/fontawesome/6.7.2/css/all.min.css" rel="stylesheet" />
+      <script src="/s/static/lib/tailwind.3.4.16.min.js"></script>
+      <script>{`
+        tailwind.config = {
+          theme: {
+            extend: {
+              colors: {
+                primary: '#000000',
+                secondary: '#1a1a1a',
+                light: '#f5f5f5',
+                accent: '#333333'
+              },
+              fontFamily: {
+                sans: ['Space Grotesk', 'system-ui', '-apple-system', 'sans-serif']
+              }
+            }
+          }
+        }
+      `}</script>
+      <style type="text/tailwindcss">{`
+        * {
+          margin: 0;
+          padding: 0;
+          box-sizing: border-box;
+        }
+        
+        body {
+          font-family: 'Space Grotesk', system-ui, -apple-system, sans-serif;
+          background: #FFFFFF;
+          color: #000000;
+          line-height: 1.6;
+          -webkit-font-smoothing: antialiased;
+          -moz-osx-font-smoothing: grayscale;
+        }
+        
+        h1, h2, h3, h4, h5, h6 {
+          font-weight: 600;
+          line-height: 1.2;
+          letter-spacing: -0.02em;
+        }
+        
+        .container-custom {
+          max-width: 1200px;
+          margin: 0 auto;
+          padding: 0 2rem;
+        }
+        
+        .nav-link {
+          position: relative;
+          transition: opacity 0.3s ease;
+        }
+        
+        .nav-link:hover {
+          opacity: 0.6;
+        }
+        
+        .btn-primary {
+          background: #000000;
+          color: #FFFFFF;
+          padding: 1rem 2.5rem;
+          border: none;
+          cursor: pointer;
+          font-weight: 500;
+          letter-spacing: 0.02em;
+          transition: all 0.3s ease;
+          text-transform: uppercase;
+          font-size: 0.875rem;
+        }
+        
+        .btn-primary:hover {
+          background: #333333;
+          transform: translateY(-2px);
+        }
+        
+        .btn-outline {
+          background: transparent;
+          color: #000000;
+          padding: 1rem 2.5rem;
+          border: 2px solid #000000;
+          cursor: pointer;
+          font-weight: 500;
+          letter-spacing: 0.02em;
+          transition: all 0.3s ease;
+          text-transform: uppercase;
+          font-size: 0.875rem;
+        }
+        
+        .btn-outline:hover {
+          background: #000000;
+          color: #FFFFFF;
+        }
+        
+        .section-padding {
+          padding: 6rem 0;
+        }
+        
+        .hero-section {
+          min-height: 100vh;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+        }
+        
+        .fade-in {
+          animation: fadeIn 1s ease-in;
+        }
+        
+        @keyframes fadeIn {
+          from { opacity: 0; transform: translateY(20px); }
+          to { opacity: 1; transform: translateY(0); }
+        }
+        
+        .image-hover {
+          transition: transform 0.5s ease, filter 0.5s ease;
+        }
+        
+        .image-hover:hover {
+          transform: scale(1.02);
+          filter: brightness(0.95);
+        }
+        
+        @media (max-width: 768px) {
+          .section-padding {
+            padding: 4rem 0;
+          }
+          
+          .container-custom {
+            padding: 0 1.5rem;
+          }
+          
+          h1 {
+            font-size: 2rem;
+          }
+        }
+      `}</style>
+    </>
+  )
 }
 
-body {
-  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Inter",
-    "Segoe UI", sans-serif;
-  background: #ffffff;
-  color: #111111;
-  line-height: 1.6;
-}
-
-.container {
-  max-width: 1180px;
-  margin: 0 auto;
-  padding: 2.5rem 2rem;
-}
-
-/* ВЕРХНЕЕ МЕНЮ */
-
-.top-nav {
-  border-bottom: 1px solid #e5e5e5;
-}
-
-.top-nav-inner {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-.top-nav-right {
-  display: flex;
-  gap: 2.5rem;
-}
-
-.top-link {
-  text-decoration: none;
-  color: #111111;
-  font-size: 0.9rem;
-  letter-spacing: 0.14em;
-  text-transform: uppercase;
-}
-
-.top-link:hover {
-  opacity: 0.5;
-}
-
-/* ОСНОВНАЯ СЕТКА СТРАНИЦЫ */
-
-.page > .container {
-  display: grid;
-  grid-template-columns: minmax(0, 3fr) minmax(0, 1.3fr);
-  gap: 4rem;
-  padding-top: 4rem;
-  padding-bottom: 3rem;
-}
-
-/* HERO */
-
-.hero-title {
-  font-size: 3.2rem;
-  font-weight: 600;
-  line-height: 1.1;
-  margin-bottom: 1.8rem;
-}
-
-.hero-subtitle {
-  font-size: 1.2rem;
-  color: #666666;
-  margin-bottom: 3rem;
-}
-
-.hero-buttons {
-  display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 1rem;
-  max-width: 420px;
-}
-
-.btn {
-  display: block;
-  padding: 0.9rem 1.1rem;
-  border: 1px solid #111111;
-  text-align: center;
-  text-decoration: none;
-  color: #111111;
-  text-transform: uppercase;
-  letter-spacing: 0.13em;
-  font-size: 0.82rem;
-}
-
-.btn:hover {
-  background: #111111;
-  color: #ffffff;
-}
-
-/* ПРАВАЯ ВЕРТИКАЛЬНАЯ НАВИГАЦИЯ */
-
-.side-nav {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-end;
-  gap: 0.5rem;
-  padding-top: 0.5rem;
-}
-
-.side-nav-label {
-  font-size: 0.8rem;
-  letter-spacing: 0.18em;
-  text-transform: uppercase;
-  color: #888888;
-}
-
-.side-nav-label:first-child {
-  margin-top: 0;
-}
-
-/* БЛОК ЭКСПЕРТИЗЫ */
-
-.expertise {
-  padding-bottom: 4rem;
-}
-
-.section-title {
-  text-transform: uppercase;
-  font-size: 0.95rem;
-  letter-spacing: 0.2em;
-  margin-bottom: 2.5rem;
-}
-
-.cards {
-  display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 2.5rem;
-  margin-bottom: 3rem;
-}
-
-.card-title {
-  font-size: 1.35rem;
-  margin-bottom: 0.5rem;
-}
-
-.paragraph {
-  max-width: 650px;
-  margin-bottom: 0.7rem;
-}
-
-.location {
-  font-size: 0.9rem;
-  color: #666666;
-}
-
-/* ФУТЕР */
-
-.footer {
-  border-top: 1px solid #e5e5e5;
-  padding: 2.5rem 0 3rem;
-}
-
-.footer-inner {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-.footer-contact {
-  text-decoration: none;
-  color: #111111;
-  text-transform: uppercase;
-  letter-spacing: 0.12em;
-  font-size: 0.85rem;
-}
-
-.footer-copy {
-  font-size: 0.8rem;
-  color: #666666;
-}
-
-/* АДАПТИВ ДЛЯ ПЛАНШЕТА И МОБИЛКИ */
-
-@media (max-width: 900px) {
-  .page > .container {
-    grid-template-columns: 1fr;
-    gap: 3rem;
-  }
-
-  .side-nav {
-    align-items: flex-start;
-  }
-
-  .cards {
-    grid-template-columns: 1fr;
-  }
-
-  .hero-title {
-    font-size: 2.4rem;
-  }
-}
-
-@media (max-width: 600px) {
-  .container {
-    padding: 2rem 1.5rem;
-  }
-
-  .top-nav-right {
-    gap: 1.2rem;
-    font-size: 0.75rem;
-  }
-
-  .hero-buttons {
-    grid-template-columns: 1fr;
-  }
-}
