@@ -1,125 +1,72 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>MØSE – Energy-Efficient Summer House Consulting</title>
-  <link rel="stylesheet" href="styles.css" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MØSE – Energy-Efficient Summer House Consulting</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
+
 <body>
 
-<header class="top-nav">
-  <div class="container">
-    <nav class="top-nav-inner">
-      <div class="top-nav-left">
-        <img src="logo.png" alt="MØSE Logo" class="logo">
-      </div>
-      <div class="top-nav-right">
-        <a href="#" class="top-link">Service</a>
-        <a href="#" class="top-link">Projects</a>
-        <a href="#" class="top-link">About</a>
-        <a href="#" class="top-link">Contact</a>
-      </div>
-    </nav>
-  </div>
-</header>
-
-<main>
-
-  <!-- HERO -->
-  <section class="hero">
-    <div class="container hero-content">
-
-      <img src="5 SOMMERHUS_.png" alt="Summer House" class="hero-image">
-
-      <h1 class="hero-title">
-        Energy-Efficient<br>
-        Summer House Consulting
-      </h1>
-
-      <p class="hero-subtitle">
-        Sustainable Design for Danish Summer Houses
-      </p>
-
-      <div class="hero-buttons">
-        <a href="#" class="btn btn-dark">view services</a>
-        <a href="#" class="btn btn-outline">view project</a>
-        <a href="#" class="btn btn-outline">contact</a>
-      </div>
-    </div>
-  </section>
-
-  <!-- OUR EXPERTISE -->
-  <section class="expertise">
-    <div class="container">
-      <h2 class="section-title">our expertice</h2>
-
-      <div class="cards">
-        <div class="card">
-          <img src="energy analysis.png" alt="Energy Analysis icon" class="card-icon">
-          <h3 class="card-title">Energy Analysis</h3>
-          <p>
-            Heat-loss evaluation, insulation upgrades, and ventilation optimization.
-          </p>
+    <!-- NAVIGATION -->
+    <header class="nav-container">
+        <div class="logo-block">
+            <img src="logo.png" alt="MØSE Logo" class="logo-img">
         </div>
 
-        <div class="card">
-          <img src="bj_layout-wtf.png" alt="Layout Improvements icon" class="card-icon">
-          <h3 class="card-title">Layout Improvements</h3>
-          <p>
-            Zoning, orientation, and shading strategies for optimal performance.
-          </p>
+        <nav class="nav">
+            <a href="#service">Service</a>
+            <a href="#projects">Projects</a>
+            <a href="#about">About</a>
+            <a href="#contact">Contact</a>
+        </nav>
+    </header>
+
+    <!-- HERO SECTION -->
+    <section class="hero">
+        <img src="summerhouse.png" alt="Summer house illustration" class="hero-image">
+
+        <h2 class="tagline">Summer House</h2>
+        <h1 class="hero-title">Energy-Efficient<br>Summer House Consulting</h1>
+        <p class="subtitle">Sustainable Design for Danish Summer Houses</p>
+
+        <div class="hero-buttons">
+            <a href="#service" class="btn black">VIEW SERVICES</a>
+            <a href="#projects" class="btn">VIEW PROJECT</a>
+            <a href="#contact" class="btn">CONTACT</a>
         </div>
+    </section>
 
-        <div class="card">
-          <img src="concept design.png" alt="Concept Design icon" class="card-icon">
-          <h3 class="card-title">Concept Design</h3>
-          <p>
-            Complete design deliverables from plans to perspectives.
-          </p>
+    <!-- EXPERTISE SECTION -->
+    <section class="expertise" id="service">
+        <h3 class="section-title">OUR EXPERTISE</h3>
+
+        <div class="expertise-grid">
+
+            <!-- Energy Analysis -->
+            <div class="expertise-card">
+                <img src="energy-analysis.png" alt="Energy Analysis icon" class="icon">
+                <h4>Energy Analysis</h4>
+                <p>Heat-loss evaluation, insulation upgrades, and ventilation optimization.</p>
+            </div>
+
+            <!-- Layout Improvements -->
+            <div class="expertise-card">
+                <img src="layout.png" alt="Layout Improvements icon" class="icon">
+                <h4>Layout Improvements</h4>
+                <p>Zoning, orientation, and shading strategies for optimal performance.</p>
+            </div>
+
+            <!-- Concept Design -->
+            <div class="expertise-card">
+                <img src="concept-design.png" alt="Concept Design icon" class="icon">
+                <h4>Concept Design</h4>
+                <p>Complete design deliverables from plans to perspectives.</p>
+            </div>
+
         </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- SUSTAINABLE DESIGN TEXT BLOCK -->
-  <section class="sustainable">
-    <div class="container sustainable-inner">
-      <h2 class="sustainable-title">
-        Sustainable Design for Danish Summer Houses
-      </h2>
-      <p class="sustainable-text">
-        We specialize in creating energy-efficient concepts that respect Scandinavian
-        design principles: clarity, structure, and sustainable thinking. Every project is
-        approached with precision and architectural integrity.
-      </p>
-      <a href="#" class="btn btn-outline center-btn">learn about us</a>
-    </div>
-  </section>
-
-</main>
-
-<footer class="footer">
-  <div class="container footer-grid">
-    <div>
-      <h3 class="footer-heading">Navigation</h3>
-      <ul class="footer-list">
-        <li><a href="#">Service</a></li>
-        <li><a href="#">Projects</a></li>
-        <li><a href="#">About</a></li>
-        <li><a href="#">Contact</a></li>
-      </ul>
-    </div>
-    <div>
-      <h3 class="footer-heading">Contact</h3>
-      <p class="footer-text">Copenhagen,<br>Denmark</p>
-    </div>
-  </div>
-  <div class="container footer-bottom">
-    <p>Energy-Efficient Summer House Consulting</p>
-    <p>© 2025 MØSE. All rights reserved.</p>
-  </div>
-</footer>
+    </section>
 
 </body>
 </html>
