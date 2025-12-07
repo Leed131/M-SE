@@ -1,134 +1,218 @@
-/* BASIC RESET */
-* { margin: 0; padding: 0; box-sizing: border-box; }
+/* RESET */
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 
 body {
-  font-family: "Inter", sans-serif;
-  background: #fff;
-  color: #111;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Inter",
+    "Segoe UI", sans-serif;
+  background: #ffffff;
+  color: #111111;
   line-height: 1.6;
 }
 
 .container {
-  max-width: 1200px;
+  max-width: 1180px;
   margin: 0 auto;
-  padding: 2rem;
+  padding: 2.5rem 2rem;
 }
 
-/* NAVIGATION */
-.nav {
-  padding: 1.5rem 0;
+/* ВЕРХНЕЕ МЕНЮ */
+
+.top-nav {
   border-bottom: 1px solid #e5e5e5;
 }
 
-.nav-links {
+.top-nav-inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.top-nav-right {
   display: flex;
   gap: 2.5rem;
 }
 
-.nav-link {
+.top-link {
   text-decoration: none;
-  color: #111;
+  color: #111111;
   font-size: 0.9rem;
-  letter-spacing: 0.12em;
+  letter-spacing: 0.14em;
   text-transform: uppercase;
 }
 
-.nav-link:hover {
+.top-link:hover {
   opacity: 0.5;
 }
 
+/* ОСНОВНАЯ СЕТКА СТРАНИЦЫ */
+
+.page > .container {
+  display: grid;
+  grid-template-columns: minmax(0, 3fr) minmax(0, 1.3fr);
+  gap: 4rem;
+  padding-top: 4rem;
+  padding-bottom: 3rem;
+}
+
 /* HERO */
-.hero {
-  padding: 6rem 0 5rem;
-}
 
-.title {
-  font-size: 3rem;
+.hero-title {
+  font-size: 3.2rem;
   font-weight: 600;
-  margin-bottom: 1.5rem;
+  line-height: 1.1;
+  margin-bottom: 1.8rem;
 }
 
-.subtitle {
+.hero-subtitle {
   font-size: 1.2rem;
-  color: #666;
+  color: #666666;
   margin-bottom: 3rem;
 }
 
-.buttons {
+.hero-buttons {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: 1rem;
-  max-width: 400px;
+  max-width: 420px;
 }
 
 .btn {
   display: block;
-  padding: 0.9rem 1.2rem;
-  border: 1px solid #111;
-  text-decoration: none;
+  padding: 0.9rem 1.1rem;
+  border: 1px solid #111111;
   text-align: center;
-  color: #111;
+  text-decoration: none;
+  color: #111111;
   text-transform: uppercase;
-  font-size: 0.85rem;
-  letter-spacing: 0.1em;
+  letter-spacing: 0.13em;
+  font-size: 0.82rem;
 }
 
 .btn:hover {
-  background: #111;
-  color: #fff;
+  background: #111111;
+  color: #ffffff;
 }
 
-/* EXPERTISE SECTION */
-.section-title {
-  text-transform: uppercase;
-  font-size: 1rem;
-  letter-spacing: 0.2em;
-  margin-bottom: 2rem;
+/* ПРАВАЯ ВЕРТИКАЛЬНАЯ НАВИГАЦИЯ */
+
+.side-nav {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 0.5rem;
+  padding-top: 0.5rem;
 }
+
+.side-nav-label {
+  font-size: 0.8rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: #888888;
+}
+
+.side-nav-label:first-child {
+  margin-top: 0;
+}
+
+/* БЛОК ЭКСПЕРТИЗЫ */
 
 .expertise {
-  padding: 5rem 0;
+  padding-bottom: 4rem;
+}
+
+.section-title {
+  text-transform: uppercase;
+  font-size: 0.95rem;
+  letter-spacing: 0.2em;
+  margin-bottom: 2.5rem;
 }
 
 .cards {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 2.5rem;
   margin-bottom: 3rem;
 }
 
 .card-title {
-  font-size: 1.4rem;
+  font-size: 1.35rem;
   margin-bottom: 0.5rem;
 }
 
 .paragraph {
   max-width: 650px;
-  margin-bottom: 1rem;
+  margin-bottom: 0.7rem;
 }
 
 .location {
   font-size: 0.9rem;
-  color: #666;
+  color: #666666;
 }
 
-/* FOOTER */
+/* ФУТЕР */
+
 .footer {
-  padding: 3rem 0;
   border-top: 1px solid #e5e5e5;
-  text-align: center;
+  padding: 2.5rem 0 3rem;
+}
+
+.footer-inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .footer-contact {
   text-decoration: none;
-  color: #111;
+  color: #111111;
   text-transform: uppercase;
-  font-size: 0.9rem;
-  letter-spacing: 0.1em;
+  letter-spacing: 0.12em;
+  font-size: 0.85rem;
 }
 
 .footer-copy {
-  margin-top: 1rem;
   font-size: 0.8rem;
-  color: #666;
+  color: #666666;
+}
+
+/* АДАПТИВ ДЛЯ ПЛАНШЕТА И МОБИЛКИ */
+
+@media (max-width: 900px) {
+  .page > .container {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+  }
+
+  .side-nav {
+    align-items: flex-start;
+  }
+
+  .cards {
+    grid-template-columns: 1fr;
+  }
+
+  .hero-title {
+    font-size: 2.4rem;
+  }
+}
+
+@media (max-width: 600px) {
+  .container {
+    padding: 2rem 1.5rem;
+  }
+
+  .top-nav-right {
+    gap: 1.2rem;
+    font-size: 0.75rem;
+  }
+
+  .hero-buttons {
+    grid-template-columns: 1fr;
+  }
 }
