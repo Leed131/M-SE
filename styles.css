@@ -120,6 +120,7 @@ img {
   display: flex;
   justify-content: center;
   gap: 16px;
+  margin-top: 54px;   /* расстояние как в макете */
 }
 
 /* ========== BUTTONS ========== */
