@@ -120,10 +120,14 @@ img {
 .btn-dark {
   background: #111111;
   color: #ffffff;
+  border: 1px solid #111111;
+  transition: 0.25s ease;
 }
 
 .btn-dark:hover {
-  background: #000000;
+  background: #4c3cff; /* black */
+  border-color: #4c3cff;
+  color: #ffffff;
 }
 
 .btn-outline {
