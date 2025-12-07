@@ -1,57 +1,125 @@
-<template>
-  <div class="min-h-screen">
-    <Navigation />
-    
-    <section class="hero-section pt-20 fade-in">
-      <div class="container-custom text-center">
-        <div class="mb-12">
-          <img 
-            src="https://usa.cdn-chatium.io/thumbnail/image_usa_zfBXEzvO0S.881x881.jpeg/s/200x" 
-            alt="MØSE Logo"
-            class="h-32 w-32 mx-auto mb-8 object-contain"
-          />
-          <h1 class="text-5xl md:text-7xl font-bold mb-6 tracking-tight">
-            Energy-Efficient<br/>Summer House Consulting
-          </h1>
-          <p class="text-xl md:text-2xl text-gray-600 mb-12 max-w-2xl mx-auto">
-            Design. Analysis. Optimization.<br/>
-            For Danish summer houses.
-          </p>
-          <div class="flex flex-col sm:flex-row gap-4 justify-center mb-16">
-            <a :href="servicesPageRoute.url()" class="btn-primary">View Services</a>
-            <a :href="projectsPageRoute.url()" class="btn-outline">View Project</a>
-            <a :href="contactPageRoute.url()" class="btn-outline">Contact</a>
-          </div>
-        </div>
-        
-        <div class="max-w-4xl mx-auto">
-          <img 
-            src="https://usa.cdn-chatium.io/thumbnail/image_usa_DDbNZj7PzP.4623x2184.jpeg/s/1200x" 
-            alt="Sommerhus Ali - Elevation"
-            class="w-full h-auto shadow-2xl image-hover"
-          />
-        </div>
-      </div>
-    </section>
-    
-    <section class="section-padding bg-black text-white">
-      <div class="container-custom text-center">
-        <h2 class="text-3xl md:text-4xl font-bold mb-6">Our Approach</h2>
-        <p class="text-lg text-gray-300 max-w-2xl mx-auto">
-          Scandinavian principles: clarity, structure, and sustainable design.
-          We focus on energy performance, architectural precision, and ecological materials.
-        </p>
-      </div>
-    </section>
-    
-    <Footer />
-  </div>
-</template>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>MØSE – Energy-Efficient Summer House Consulting</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
 
-<script setup>
-import Navigation from '../components/Navigation.vue'
-import Footer from '../components/Footer.vue'
-import { servicesPageRoute } from '../services'
-import { projectsPageRoute } from '../projects'
-import { contactPageRoute } from '../contact'
-</script>
+<header class="top-nav">
+  <div class="container">
+    <nav class="top-nav-inner">
+      <div class="top-nav-left">
+        <img src="logojpg.jpg" alt="MØSE Logo" class="logo">
+      </div>
+      <div class="top-nav-right">
+        <a href="#" class="top-link">Service</a>
+        <a href="#" class="top-link">Projects</a>
+        <a href="#" class="top-link">About</a>
+        <a href="#" class="top-link">Contact</a>
+      </div>
+    </nav>
+  </div>
+</header>
+
+<main>
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="container hero-content">
+
+      <img src="5 SOMMERHUS ALI - 19.10.jpg" alt="Summer House" class="hero-image">
+
+      <h1 class="hero-title">
+        Energy-Efficient<br>
+        Summer House Consulting
+      </h1>
+
+      <p class="hero-subtitle">
+        Sustainable Design for Danish Summer Houses
+      </p>
+
+      <div class="hero-buttons">
+        <a href="#" class="btn btn-dark">view services</a>
+        <a href="#" class="btn btn-outline">view project</a>
+        <a href="#" class="btn btn-outline">contact</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- OUR EXPERTISE -->
+  <section class="expertise">
+    <div class="container">
+      <h2 class="section-title">our expertice</h2>
+
+      <div class="cards">
+        <div class="card">
+          <img src="energy analysis.png" alt="Energy Analysis icon" class="card-icon">
+          <h3 class="card-title">Energy Analysis</h3>
+          <p>
+            Heat-loss evaluation, insulation upgrades, and ventilation optimization.
+          </p>
+        </div>
+
+        <div class="card">
+          <img src="bj_layout-wtf.png" alt="Layout Improvements icon" class="card-icon">
+          <h3 class="card-title">Layout Improvements</h3>
+          <p>
+            Zoning, orientation, and shading strategies for optimal performance.
+          </p>
+        </div>
+
+        <div class="card">
+          <img src="concept design.png" alt="Concept Design icon" class="card-icon">
+          <h3 class="card-title">Concept Design</h3>
+          <p>
+            Complete design deliverables from plans to perspectives.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SUSTAINABLE DESIGN TEXT BLOCK -->
+  <section class="sustainable">
+    <div class="container sustainable-inner">
+      <h2 class="sustainable-title">
+        Sustainable Design for Danish Summer Houses
+      </h2>
+      <p class="sustainable-text">
+        We specialize in creating energy-efficient concepts that respect Scandinavian
+        design principles: clarity, structure, and sustainable thinking. Every project is
+        approached with precision and architectural integrity.
+      </p>
+      <a href="#" class="btn btn-outline center-btn">learn about us</a>
+    </div>
+  </section>
+
+</main>
+
+<footer class="footer">
+  <div class="container footer-grid">
+    <div>
+      <h3 class="footer-heading">Navigation</h3>
+      <ul class="footer-list">
+        <li><a href="#">Service</a></li>
+        <li><a href="#">Projects</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Contact</a></li>
+      </ul>
+    </div>
+    <div>
+      <h3 class="footer-heading">Contact</h3>
+      <p class="footer-text">Copenhagen,<br>Denmark</p>
+    </div>
+  </div>
+  <div class="container footer-bottom">
+    <p>Energy-Efficient Summer House Consulting</p>
+    <p>© 2025 MØSE. All rights reserved.</p>
+  </div>
+</footer>
+
+</body>
+</html>
