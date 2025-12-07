@@ -36,7 +36,7 @@ img {
   display: flex;
   align-items: center;        /* центрируем лого и меню по вертикали */
   justify-content: space-between;
-  padding: 0 40px;            /* боковые отступы */
+  padding: 0 80px;            /* боковые отступы */
   position: relative;
   box-sizing: border-box;
 }
@@ -82,7 +82,7 @@ img {
 /* ========== HERO ========== */
 
 .hero {
-  padding: 40px 40px 96px;
+  padding: 80px 80px 96px;
   text-align: center;
 }
 
@@ -106,7 +106,7 @@ img {
   text-transform: uppercase;
   letter-spacing: 0.08em;
   line-height: 1.4;
-  max-width: 600px;
+  max-width: 800px;
   margin: 0 auto 16px;
 }
 
