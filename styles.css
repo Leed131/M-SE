@@ -36,7 +36,7 @@ img {
   display: flex;
   align-items: center;        /* центрируем лого и меню по вертикали */
   justify-content: space-between;
-  padding: 0 80px;            /* боковые отступы */
+  padding: 24px 80px 0;           /* боковые отступы */
   position: relative;
   box-sizing: border-box;
 }
