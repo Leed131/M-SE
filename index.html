@@ -8,33 +8,40 @@
 </head>
 <body>
 
-  <!-- HEADER -->
-  <header class="top-nav">
-    <div class="container top-nav-inner">
-      <div class="logo-wrap">
-        <img src="logo.png" alt="MØSE Logo" class="logo">
+  <div class="page">
+
+    <!-- HEADER -->
+    <header class="header">
+      <div class="header-inner">
+        <div class="logo-wrap">
+          <img src="logo.png" alt="MØSE Logo" class="logo" />
+        </div>
+
+        <nav class="nav">
+          <a href="#service" class="nav-link">Service</a>
+          <a href="#projects" class="nav-link">Projects</a>
+          <a href="#about" class="nav-link">About</a>
+          <a href="#contact" class="nav-link">Contact</a>
+        </nav>
       </div>
-      <nav class="top-menu">
-        <a href="#service" class="top-link">Service</a>
-        <a href="#projects" class="top-link">Projects</a>
-        <a href="#about" class="top-link">About</a>
-        <a href="#contact" class="top-link">Contact</a>
-      </nav>
-    </div>
-  </header>
 
-  <main>
-    <!-- HERO -->
-    <section class="hero" id="projects">
-      <div class="container hero-inner">
+      <!-- линия под меню -->
+      <div class="header-line"></div>
+    </header>
 
-        <img src="summerhouse.png" alt="Summer house" class="hero-image">
+    <main>
+      <!-- HERO -->
+      <section class="hero" id="projects">
+        <img
+          src="summerhouse.png"
+          alt="Summer house illustration"
+          class="hero-image"
+        />
 
-        <p class="hero-tagline">Summer House</p>
+        <p class="hero-tagline">SUMMER HOUSE</p>
 
         <h1 class="hero-title">
-          Energy-Efficient<br />
-          Summer House Consulting
+          ENERGY-EFFICIENT SUMMER HOUSE CONSULTING
         </h1>
 
         <p class="hero-subtitle">
@@ -44,84 +51,98 @@
         <div class="hero-buttons">
           <a href="#service" class="btn btn-dark">VIEW SERVICES</a>
           <a href="#projects" class="btn btn-outline">VIEW PROJECT</a>
-          <a href="#about"   class="btn btn-outline">LEARN ABOUT US</a>
           <a href="#contact" class="btn btn-outline">CONTACT</a>
         </div>
-      </div>
-    </section>
+      </section>
 
-    <!-- OUR EXPERTISE -->
-    <section class="expertise" id="service">
-      <div class="container">
+      <!-- OUR EXPERTICE -->
+      <section class="expertice" id="service">
         <h2 class="section-title">OUR EXPERTICE</h2>
 
         <div class="cards">
-          <div class="card">
-            <img src="energy-analysis.png" alt="Energy Analysis icon" class="card-icon" />
+          <article class="card">
+            <img src="energy-analysis.png" alt="Energy Analysis" class="card-icon" />
             <h3 class="card-title">Energy Analysis</h3>
-            <p>
+            <p class="card-text">
               Heat-loss evaluation, insulation upgrades, and ventilation optimization.
             </p>
-          </div>
+          </article>
 
-          <div class="card">
-            <img src="layout.png" alt="Layout Improvements icon" class="card-icon" />
+          <article class="card">
+            <img src="layout.png" alt="Layout Improvements" class="card-icon" />
             <h3 class="card-title">Layout Improvements</h3>
-            <p>
+            <p class="card-text">
               Zoning, orientation, and shading strategies for optimal performance.
             </p>
+          </article>
+
+          <article class="card">
+            <img src="concept-design.png" alt="Concept Design" class="card-icon" />
+            <h3 class="card-title">Concept Design</h3>
+            <p class="card-text">
+              Complete design deliverables from plans to perspectives.
+            </p>
+          </article>
+        </div>
+      </section>
+
+      <!-- SUSTAINABLE BLOCK -->
+      <section class="sustainable" id="about">
+        <h2 class="sustainable-heading">
+          SUSTAINABLE DESIGN FOR DANISH SUMMER HOUSES
+        </h2>
+        <p class="sustainable-text">
+          We specialize in creating energy-efficient concepts that respect Scandinavian
+          design principles: clarity, structure, and sustainable thinking. Every project
+          is approached with precision and architectural integrity.
+        </p>
+
+        <a href="#about" class="btn btn-outline learn-btn">LEARN ABOUT US</a>
+      </section>
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="footer" id="contact">
+      <!-- верхняя белая линия, как в макете -->
+      <div class="footer-top-line"></div>
+
+      <div class="footer-inner">
+        <div class="footer-left">
+          <p class="footer-small">
+            Energy-Efficient Summer House Consulting
+          </p>
+        </div>
+
+        <div class="footer-columns">
+          <div class="footer-col">
+            <h3 class="footer-heading">Navigation</h3>
+            <ul class="footer-list">
+              <li><a href="#service">Service</a></li>
+              <li><a href="#projects">Projects</a></li>
+              <li><a href="#about">About</a></li>
+              <li><a href="#contact">Contact</a></li>
+            </ul>
           </div>
 
-          <div class="card">
-            <img src="concept-design.png" alt="Concept Design icon" class="card-icon" />
-            <h3 class="card-title">Concept Design</h3>
-            <p>
-              Complete design deliverables from plans to perspectives.
+          <div class="footer-col">
+            <h3 class="footer-heading">Contact</h3>
+            <p class="footer-text">
+              Copenhagen,<br />
+              Denmark
             </p>
           </div>
         </div>
       </div>
-    </section>
 
-    <!-- SUSTAINABLE TEXT BLOCK -->
-    <section class="sustainable" id="about">
-      <div class="container sustainable-inner">
-        <h2 class="sustainable-title">
-          Sustainable Design for Danish Summer Houses
-        </h2>
-        <p class="sustainable-text">
-          We specialize in creating energy-efficient concepts that respect Scandinavian
-          design principles: clarity, structure, and sustainable thinking. Every project is
-          approached with precision and architectural integrity.
-        </p>
+      <!-- внутренняя линия в футере -->
+      <div class="footer-divider"></div>
+
+      <div class="footer-bottom">
+        <p class="footer-copy">© 2025 MØSE. All rights reserved.</p>
       </div>
-    </section>
+    </footer>
 
-  </main>
-
-  <!-- FOOTER -->
-  <footer class="footer" id="contact">
-    <div class="container footer-grid">
-      <div>
-        <h3 class="footer-heading">Navigation</h3>
-        <ul class="footer-list">
-          <li><a href="#service">Service</a></li>
-          <li><a href="#projects">Projects</a></li>
-          <li><a href="#about">About</a></li>
-          <li><a href="#contact">Contact</a></li>
-        </ul>
-      </div>
-      <div>
-        <h3 class="footer-heading">Contact</h3>
-        <p class="footer-text">Copenhagen,<br />Denmark</p>
-      </div>
-    </div>
-
-    <div class="container footer-bottom">
-      <p>Energy-Efficient Summer House Consulting</p>
-      <p>© 2025 MØSE. All rights reserved.</p>
-    </div>
-  </footer>
+  </div>
 
 </body>
 </html>
