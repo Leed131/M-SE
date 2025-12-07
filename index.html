@@ -8,66 +8,95 @@
 </head>
 <body>
 
-<header class="nav">
+<header class="top-nav">
   <div class="container">
-    <nav class="nav-links">
-      <a href="#" class="nav-link">Service</a>
-      <a href="#" class="nav-link">Projects</a>
-      <a href="#" class="nav-link">About</a>
-      <a href="#" class="nav-link">Contact</a>
+    <nav class="top-nav-inner">
+      <div class="top-nav-left">
+        <!-- можно сюда позже добавить логотип -->
+      </div>
+      <div class="top-nav-right">
+        <a href="#" class="top-link">Service</a>
+        <a href="#" class="top-link">Projects</a>
+        <a href="#" class="top-link">About</a>
+        <a href="#" class="top-link">Contact</a>
+      </div>
     </nav>
   </div>
 </header>
 
-<section class="hero">
+<main class="page">
   <div class="container">
-    <h1 class="title">Energy-Efficient<br>Summer House Consulting</h1>
 
-    <p class="subtitle">
-      Sustainable Design for Danish Summer Houses
-    </p>
+    <!-- Левая колонка: заголовок, текст, кнопки -->
+    <section class="hero">
+      <h1 class="hero-title">
+        Energy-Efficient<br>
+        Summer House Consulting
+      </h1>
 
-    <div class="buttons">
-      <a href="#" class="btn">view services</a>
-      <a href="#" class="btn">view project</a>
-      <a href="#" class="btn">learn about us</a>
-      <a href="#" class="btn">contact</a>
-    </div>
+      <p class="hero-subtitle">
+        Sustainable Design for Danish Summer Houses
+      </p>
+
+      <div class="hero-buttons">
+        <a href="#" class="btn">view services</a>
+        <a href="#" class="btn">view project</a>
+        <a href="#" class="btn">learn about us</a>
+        <a href="#" class="btn">contact</a>
+      </div>
+    </section>
+
+    <!-- Правая колонка – вертикальный блок (как в макете можно будет доработать) -->
+    <aside class="side-nav">
+      <span class="side-nav-label">About</span>
+      <span class="side-nav-label">Service</span>
+      <span class="side-nav-label">Projects</span>
+      <span class="side-nav-label">Contact</span>
+    </aside>
+
   </div>
-</section>
 
-<section class="expertise">
-  <div class="container">
-    <h2 class="section-title">our expertice</h2>
+  <!-- Блок компетенций -->
+  <section class="expertise">
+    <div class="container">
+      <h2 class="section-title">our expertice</h2>
 
-    <div class="cards">
-      <div class="card">
-        <h3 class="card-title">Energy Analysis</h3>
-        <p>Heat-loss evaluation, insulation upgrades, and ventilation optimization.</p>
+      <div class="cards">
+        <div class="card">
+          <h3 class="card-title">Energy Analysis</h3>
+          <p>
+            Heat-loss evaluation, insulation upgrades, and ventilation optimization.
+          </p>
+        </div>
+
+        <div class="card">
+          <h3 class="card-title">Layout Improvements</h3>
+          <p>
+            Zoning, orientation, and shading strategies for optimal performance.
+          </p>
+        </div>
+
+        <div class="card">
+          <h3 class="card-title">Concept Design</h3>
+          <p>
+            Complete design deliverables from plans to perspectives.
+          </p>
+        </div>
       </div>
 
-      <div class="card">
-        <h3 class="card-title">Layout Improvements</h3>
-        <p>Zoning, orientation, and shading strategies for optimal performance.</p>
-      </div>
+      <p class="paragraph">
+        We specialize in creating energy-efficient concepts that respect Scandinavian
+        design principles: clarity, structure, and sustainable thinking. Every project is
+        approached with precision and architectural integrity.
+      </p>
 
-      <div class="card">
-        <h3 class="card-title">Concept Design</h3>
-        <p>Complete design deliverables from plans to perspectives.</p>
-      </div>
+      <p class="location">Copenhagen, Denmark</p>
     </div>
-
-    <p class="paragraph">
-      We specialize in creating energy-efficient concepts that respect Scandinavian design principles: clarity, structure, and sustainable thinking. 
-      Every project is approached with precision and architectural integrity.
-    </p>
-
-    <p class="location">Copenhagen, Denmark</p>
-  </div>
-</section>
+  </section>
+</main>
 
 <footer class="footer">
-  <div class="container">
+  <div class="container footer-inner">
     <a href="#" class="footer-contact">Contact</a>
     <p class="footer-copy">© 2025 MØSE. All rights reserved.</p>
   </div>
