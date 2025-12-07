@@ -32,7 +32,7 @@ img {
 /* ========== HEADER ========== */
 
 .header {
-  height: 40px;               /* фиксированная высота */
+  height: 80px;               /* фиксированная высота */
   display: flex;
   align-items: center;        /* центрируем лого и меню по вертикали */
   justify-content: space-between;
