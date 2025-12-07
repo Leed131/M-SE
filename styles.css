@@ -1,4 +1,4 @@
-/* ============ RESET & BASE ============ */
+/* ========== RESET ========== */
 
 *,
 *::before,
@@ -17,22 +17,24 @@ body {
 }
 
 img {
-  max-width: 100%;
   display: block;
+  max-width: 100%;
 }
+
+/* ========== PAGE WRAPPER (1440) ========== */
 
 .page {
   max-width: 1440px;
   margin: 0 auto;
 }
 
-/* ============ HEADER ============ */
+/* ========== HEADER ========== */
 
 .header {
   padding: 40px 80px 0;
 }
 
-.header-inner {
+.header-row {
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -60,7 +62,7 @@ img {
   opacity: 0.6;
 }
 
-/* линия под меню */
+/* тонкая линия под меню */
 .header-line {
   margin-top: 40px;
   height: 1px;
@@ -68,7 +70,7 @@ img {
   background-color: #000000;
 }
 
-/* ============ HERO ============ */
+/* ========== HERO ========== */
 
 .hero {
   padding: 80px 80px 96px;
@@ -81,14 +83,14 @@ img {
   margin: 0 auto 40px;
 }
 
-.hero-tagline {
+.hero-tag {
   font-size: 11px;
   text-transform: uppercase;
   letter-spacing: 0.18em;
   margin-bottom: 16px;
 }
 
-/* заголовок как в макете: капс, ширина 600, 24 px */
+/* 600 px, капсом, как в макете */
 .hero-title {
   font-size: 24px;
   font-weight: 400;
@@ -105,15 +107,13 @@ img {
   margin-bottom: 32px;
 }
 
-/* кнопки героя — 3 штуки */
-
 .hero-buttons {
   display: flex;
   justify-content: center;
   gap: 16px;
 }
 
-/* ============ BUTTONS ============ */
+/* ========== BUTTONS ========== */
 
 .btn {
   border: 1px solid #111111;
@@ -122,11 +122,10 @@ img {
   text-decoration: none;
   font-size: 11px;
   letter-spacing: 0.14em;
-  text-align: center;
-  transition: background 0.2s ease, color 0.2s ease, border-color 0.2s ease;
   display: inline-flex;
   align-items: center;
   justify-content: center;
+  transition: background 0.2s ease, color 0.2s ease, border-color 0.2s ease;
 }
 
 .btn-dark {
@@ -149,12 +148,12 @@ img {
   color: #ffffff;
 }
 
-/* доп. для кнопки LEARN ABOUT US */
+/* learn about us */
 .learn-btn {
   margin-top: 32px;
 }
 
-/* ============ OUR EXPERTICE ============ */
+/* ========== OUR EXPERTICE ========== */
 
 .expertice {
   background: #faf7f5;
@@ -162,7 +161,7 @@ img {
   text-align: center;
 }
 
-.section-title {
+.section-label {
   font-size: 12px;
   text-transform: uppercase;
   letter-spacing: 0.2em;
@@ -175,13 +174,8 @@ img {
   gap: 40px;
 }
 
-.card {
-  text-align: center;
-}
-
 .card-icon {
   width: 48px;
-  height: auto;
   margin: 0 auto 16px;
 }
 
@@ -195,28 +189,28 @@ img {
   color: #555555;
 }
 
-/* ============ SUSTAINABLE BLOCK ============ */
+/* ========== SUSTAINABLE BLOCK ========== */
 
 .sustainable {
   padding: 72px 80px 80px;
   text-align: center;
 }
 
-.sustainable-heading {
+.sust-title {
   font-size: 12px;
   text-transform: uppercase;
   letter-spacing: 0.2em;
   margin-bottom: 16px;
 }
 
-.sustainable-text {
+.sust-text {
   max-width: 720px;
   margin: 0 auto;
   font-size: 14px;
   color: #444444;
 }
 
-/* ============ FOOTER ============ */
+/* ========== FOOTER ========== */
 
 .footer {
   background: #000000;
@@ -224,27 +218,27 @@ img {
   padding: 40px 80px 24px;
 }
 
-/* верхняя линия футера (белая граница блока) */
+/* верхний «край» чёрного блока */
 .footer-top-line {
   height: 1px;
   width: 100%;
-  background-color: #000000; /* визуально граница белого/чёрного */
+  background-color: #000000; /* граница между белым и чёрным */
   margin-bottom: 40px;
 }
 
-.footer-inner {
+.footer-main {
   display: grid;
   grid-template-columns: 1.5fr 2fr;
   column-gap: 80px;
   align-items: flex-start;
 }
 
-.footer-small {
+.footer-consulting {
   font-size: 13px;
   color: #d0d0d0;
 }
 
-.footer-columns {
+.footer-cols {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: 60px;
@@ -279,7 +273,7 @@ img {
   font-size: 13px;
 }
 
-/* внутренняя тонкая линия */
+/* внутренняя линия */
 .footer-divider {
   margin-top: 32px;
   height: 1px;
@@ -290,14 +284,11 @@ img {
 .footer-bottom {
   margin-top: 16px;
   text-align: center;
-}
-
-.footer-copy {
   font-size: 11px;
   color: #cfcfcf;
 }
 
-/* ============ RESPONSIVE (простая адаптация) ============ */
+/* ========== SIMPLE RESPONSIVE ========== */
 
 @media (max-width: 900px) {
   .header,
@@ -309,20 +300,16 @@ img {
     padding-right: 24px;
   }
 
-  .nav {
-    gap: 16px;
-  }
-
   .cards {
     grid-template-columns: 1fr;
   }
 
-  .footer-inner {
+  .footer-main {
     grid-template-columns: 1fr;
     row-gap: 24px;
   }
 
-  .footer-columns {
+  .footer-cols {
     grid-template-columns: 1fr 1fr;
   }
 }
@@ -332,8 +319,7 @@ img {
     flex-direction: column;
   }
 
-  .footer-columns {
+  .footer-cols {
     grid-template-columns: 1fr;
   }
 }
-
