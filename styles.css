@@ -82,7 +82,7 @@ img {
 /* ========== HERO ========== */
 
 .hero {
-  padding: 80px 80px 96px;
+  padding: 80px 80px 128px;
   text-align: center;
 }
 
@@ -107,7 +107,7 @@ img {
   letter-spacing: 0.08em;
   line-height: 1.4;
   max-width: 800px;
-  margin: -8px auto 16px; 
+  margin: -54px auto 16px; 
 }
 
 .hero-subtitle {
